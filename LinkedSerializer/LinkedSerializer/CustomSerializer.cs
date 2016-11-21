@@ -41,7 +41,7 @@ namespace LinkedSerializer
         //offset,next,prev,rand
         private const int NumberOfIntFields = 4;
 
-        //Format will be {next:'',prev:'',rand:'',data:''}
+        //Format in file will be (int,[int,int,int,int,string]*n) - (count,(offset,next,prev,rand)*n)
         public void Serialize(FileStream s)
         {
             //WriteCount
